@@ -149,3 +149,8 @@ function genesis_sample_comments_gravatar( $args ) {
 	return $args;
 
 }
+
+
+// Add WooCommerce support. Copié depuis ligne 38 début des fonctions WOOCOMMERCE
+//chemin vers le thème actif et ou enfant
+include_once( get_stylesheet_directory() . '/lib/woocommerce-module/woocommerce-niv2.php' );
