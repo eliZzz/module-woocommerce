@@ -26,9 +26,13 @@ add_action( 'woocommerce_before_single_product_summary','woocommerce_template_si
 function monACF(){
     $textile= get_field("wooCom2_composition_textile");
     if (!empty($textile)){
-        echo  "<p class='compoTextile'> {$textile} </p>" ;
-        
-    }else { echo '<p>variable vide</p>' ; }
+        echo  "<p class='compoTextile'> {$textile} </p>" ;      
+    }
 }
 add_action ('woocommerce_product_meta_end', 'monACF', 1);
 
+function wooCom2_alerte_compo_textile(){
+    echo '<div class="error fade">Attention à bien mettre la compo textile</div>';
+}
+
+add_action('admin_notices', 'wooCom2_alerte_compo_textile');
