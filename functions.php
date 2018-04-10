@@ -155,4 +155,6 @@ function genesis_sample_comments_gravatar( $args ) {
 //chemin vers le thème actif et ou enfant
 include_once( get_stylesheet_directory() . '/lib/woocommerce-module/woocommerce-niv2.php' );
 
-include_once( get_stylesheet_directory() . '/lib/woocommerce-module/acf_function.php' );
+include_once( get_stylesheet_directory() . '/lib/woocommerce-module/acf-function.php' );
+
+include_once( get_stylesheet_directory() . '/lib/woocommerce-module/debug-functions.php' );//à désactiver en prod

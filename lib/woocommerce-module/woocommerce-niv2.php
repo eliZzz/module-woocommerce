@@ -28,6 +28,8 @@ function monACF(){
     if (!empty($textile)){
         echo  "<p class='compoTextile'> {$textile} </p>" ;      
     }
+    // var_dump($textile);
+    // print_r($textile);
 }
 add_action ('woocommerce_product_meta_end', 'monACF', 1);
 
