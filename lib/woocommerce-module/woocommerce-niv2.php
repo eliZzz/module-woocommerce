@@ -36,3 +36,4 @@ function wooCom2_alerte_compo_textile(){
 }
 
 add_action('admin_notices', 'wooCom2_alerte_compo_textile');
+
