@@ -31,3 +31,4 @@ function monACF(){
     }else { echo '<p>variable vide</p>' ; }
 }
 add_action ('woocommerce_product_meta_end', 'monACF', 1);
+
