@@ -21,10 +21,13 @@ remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_singl
 add_action( 'woocommerce_before_single_product_summary','woocommerce_template_single_price', 5 );
 
 
+//if($textile) existe en php
+
 function monACF(){
-    $textile=get_field("wooCom2_composition_textile");
-    if (empty($textile)){
-        echo 'variable vide' ;
-    }else { echo $textile ; }
+    $textile= get_field("wooCom2_composition_textile");
+    if (!empty($textile)){
+        echo  "<p class='compoTextile'> {$textile} </p>" ;
+        
+    }else { echo '<p>variable vide</p>' ; }
 }
-add_action ('woocommerce_product_meta_end', 'monACF', 10);
+add_action ('woocommerce_product_meta_end', 'monACF', 1);
