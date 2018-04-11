@@ -158,3 +158,5 @@ include_once( get_stylesheet_directory() . '/lib/woocommerce-module/woocommerce-
 include_once( get_stylesheet_directory() . '/lib/woocommerce-module/acf-function.php' );
 
 include_once( get_stylesheet_directory() . '/lib/woocommerce-module/debug-functions.php' );//à désactiver en prod
+
+include_once( get_stylesheet_directory() . '/lib/woocommerce-module/email-woocommerce.php' );

@@ -39,3 +39,15 @@ function wooCom2_alerte_compo_textile(){
 
 add_action('admin_notices', 'wooCom2_alerte_compo_textile');
 
+add_action('wp_head', 'wooCom2_option_avis' );//
+
+//on  retire les notes à une condition
+
+function wooCom2_option_avis(){
+    if (get_field("wooCom2_masquer_les_avis")){
+        remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_rating', 10 );
+    }
+
+}
+
+
